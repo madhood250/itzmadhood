@@ -1,0 +1,104 @@
+ex no : 01
+IMPLEMENT SIMPLE ADTs AS PYTHON CLASSES 
+
+class list_ADT():
+    def __init__(self):
+        self.l = []
+
+    def insert_at_end(self, a):
+        self.l.append(a)
+
+    def insert_at_begininning(self, a):
+        self.l.insert(0, a)
+
+    def insert_at_middle(self, ind, a):
+        self.l.insert(ind, a)
+
+    def remove(self, b):
+        self.l.remove(b)
+
+    def display(self):
+        return self.l
+
+print("Implementation of List using Python Class")
+obj = list_ADT()
+
+while(1):
+    print("1.INSERT AT BEGINNING")
+    print("2.INSERT AT MIDDLE")
+    print("3.INSERT AT END")
+    print("4.DELETE AN ELEMENT")
+    print("5.DISPLAY THE LIST")
+    print("6.Exit")
+
+    choice = int(input("Enter choice: "))
+    
+    if choice == 1:
+        n = int(input("Enter element to insert: "))
+        obj.insert_at_begininning(n)
+    elif choice == 2:
+        n = int(input("Enter element to insert: "))
+        pos = int(input("Enter at which index element to insert:"))
+        obj.insert_at_middle(pos, n)
+    elif choice == 3:
+        n = int(input("Enter element to append: "))
+        obj.insert_at_end(n)
+    elif choice == 4:
+        n = int(input("Enter element to remove: "))
+        obj.remove(n)
+    elif choice == 5:
+        print("List is", obj.display())
+    else:
+        print("PROGRAM EXIT")
+        break   
+
+
+✅ 1. Class Structure
+A class named list_ADT is created.
+
+It contains an internal list (self.l) that stores the elements.
+
+The constructor (__init__) initializes this list as empty.
+
+✅ 2. Operations Defined in the Class
+🔹 Insert at Beginning:
+Adds a new element at the start of the list (index 0).
+
+This is useful when priority or order matters.
+
+🔹 Insert at Middle:
+Inserts a new element at a specific index provided by the user.
+
+Useful for maintaining order or structure in the list.
+
+🔹 Insert at End:
+Appends a new element to the end of the list.
+
+Commonly used when adding elements without worrying about order.
+
+🔹 Remove an Element:
+Removes the first occurrence of a given element.
+
+If the element does not exist, an error may occur (can be handled with a condition).
+
+🔹 Display:
+Returns the current list, allowing the user to see the elements in it.
+
+✅ 3. User Interaction (Menu-Driven Interface)
+The program provides a menu with options numbered 1 to 6.
+
+The user selects an option and enters the required data.
+
+Based on the choice, the appropriate list operation is performed.
+
+✅ 4. Exit Condition
+If the user selects an invalid option or chooses to exit, the program terminates with a message.
+
+🧠 Why is this Important?
+Demonstrates basic data structure manipulation using Python.
+
+Uses OOP principles: encapsulation (class), abstraction (hiding internal implementation).
+
+Helps understand how list operations can be customized and controlled.
+
+
